@@ -231,4 +231,21 @@ function declareWinner(winner) {
     messageText.innerHTML = msg;
     messageContainer.classList.remove("hide");
 
+    // esconde msg
+    setTimeout(function(){
+        messageContainer.classList.add("hide");
+    }, 1400);
+
+    // zerar as jogadas
+    player1 = 0;
+    player2 = 0;
+
+    // remove x e o
+    let boxesToRemove = document.querySelectorAll(".box div");
+
+    for (let i = 0; i < boxesToRemove.length; i++) {
+        boxesToRemove[i].parentNode.removeChild(boxesToRemove[i]);
+        
+    }
+
 }
